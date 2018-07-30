@@ -18,5 +18,5 @@ COPY . .
 
 ENV INITSYSTEM on
 
-CMD ["service pure-ftpd restart"]
+# CMD ["service pure-ftpd restart"]
 
