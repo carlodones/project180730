@@ -14,7 +14,7 @@ COPY . .
 
 ENV INITSYSTEM on
 
-CMD ["gdebi /usr/src/app/src/pictory_1.1.1-4_all.deb"]
+# CMD ["gdebi /usr/src/app/src/pictory_1.1.1-4_all.deb"]
 
 
 
