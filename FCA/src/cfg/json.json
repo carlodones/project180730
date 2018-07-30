@@ -1,0 +1,23 @@
+{
+    "signals": [
+        {
+            "id": "test1",
+            "iscategorical": "1"
+        },
+        {
+            "id": "test2",
+            "iscategorical": "2"
+        }
+    ],
+    "generalSET": [
+        {
+            "serverNAME": "test1"
+        }
+    ],
+        
+    "directSET": [
+        {
+            "port": "502"
+        }
+    ]
+}

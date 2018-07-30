@@ -1,0 +1,24 @@
+{
+    "qos": "GOOD",
+    "timestampDevice": 1532431800.703167,
+    "values": [
+        {
+            "address": "TEMP01",
+            "payload": 235.5,
+            "qos": 123,
+            "timestampDevice": 1532431800.703167
+        },
+        {
+            "address": "TEMP02",
+            "payload": 240.5,
+            "qos": 123,
+            "timestampDevice": 1532431800.703167
+        },
+        {
+            "address": "PRESS01",
+            "payload": 180,
+            "qos": 123,
+            "timestampDevice": 1532431800.703167
+        }
+    ]
+}
