@@ -1,0 +1,50 @@
+# FTP
+
+
+groupadd ftpgroup && \
+
+
+useradd ftpuser -g ftpgroup -s /sbin/nologin -d /dev/null && \
+
+
+mkdir /home/pi/FTP && \
+
+
+chown -R ftpuser:ftpgroup /home/pi/FTP && \
+
+
+pure-pw useradd upload -u ftpuser -g ftpgroup -d /home/pi/FTP -m && \
+
+
+ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/60puredb && \
+
+# FTP 2
+
+sudo apt-get update
+sudo apt-get install vsftpd
+sudo nano /etc/vsftpd.conf
+
+# In this file find the following lines and un-comment them by deleting the # character :
+
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+chroot_local_user=YES
+
+Add the following lines to the end of the file :
+
+user_sub_token=$USER
+local_root=/home/$USER/ftp
+
+# Save and exit using CTRL-X, Y and ENTER.
+
+# To allow you to connect to the FTP server using the default Pi user we need to create a few directories :
+
+mkdir /home/pi/ftp
+mkdir /home/pi/ftp/files
+
+# Change the permissions on the ftp directory using :
+
+chmod a-w /home/pi/ftp
+
