@@ -8,4 +8,4 @@ services:
     privileged: true
   FTP:
     build: .FTP
-    PICTORY: true
+    privileged: true
